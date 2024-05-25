@@ -1,0 +1,72 @@
+// Interview Question - null vs undefined?
+undefined
+var arr = [10,20,30];
+undefined
+arr = null;
+null
+var a;
+undefined
+typeof a;
+'undefined'
+typeof arr;
+'object'
+arr==a;
+true
+arr;
+null
+a;
+undefined
+arr===a;
+false
+10 + null;
+10
+10 + undefined;
+NaN
+null + null;
+0
+undefined + undefined;
+NaN
+Symbol() == Symbol();
+false
+var x =Symbol();
+undefined
+x;
+Symbol()
+typeof x;
+'symbol'
+var y = Symbol();
+undefined
+y;
+Symbol()
+x==y;
+false
+var arr= [10,2,3];
+undefined
+typeof arr;
+'object'
+arr.push(1000);
+4
+arr;
+(4) [10, 2, 3, 1000]
+var e=100;
+undefined
+typeof e;
+'number'
+e++;
+100
+e;
+101
+arr++;
+NaN
+arr;
+NaN
+var arr= [10,2,3];
+undefined
+typeof arr;
+'object'
+e;
+101
+e.toString();
+'101'
+e;
+101

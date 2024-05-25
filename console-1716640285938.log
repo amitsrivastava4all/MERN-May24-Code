@@ -1,0 +1,265 @@
+var a= 10000;
+undefined
+typeof a;
+'number'
+a=Number.MAX_SAFE_INTEGER;
+9007199254740991
+a++;
+9007199254740991
+a++;
+9007199254740992
+a++;
+9007199254740992
+a++;
+9007199254740992
+a=9007199254740992n;
+9007199254740992n
+typeof a;
+'bigint'
+a++;
+9007199254740992n
+a++;
+9007199254740993n
+a++;
+9007199254740994n
+a++;
+9007199254740995n
+a++;
+9007199254740996n
+a = BigInt("5435353454353453453");
+5435353454353453453n
+42342342n + 345345n;
+42687687n
+3434n + 5454;
+VM359:1 Uncaught TypeError: Cannot mix BigInt and other types, use explicit conversions
+    at <anonymous>:1:7
+(anonymous) @ VM359:1
+Symbol() == Symbol();
+false
+typeof Symbol;
+'function'
+typeof Symbol();
+'symbol'
+Symbol();
+Symbol()
+var a = 57649857648976984576984576987459867;
+undefined
+a;
+5.764985764897698e+34
+function show(){
+    console.log("I am the Show ");
+}
+undefined
+show();
+VM618:2 I am the Show 
+undefined
+show(10);
+VM618:2 I am the Show 
+undefined
+show(10,20);
+VM618:2 I am the Show 
+undefined
+show(10,20, "Amit");
+VM618:2 I am the Show 
+undefined
+show(10,20, "Amit", true);
+VM618:2 I am the Show 
+undefined
+show(10,20, "Amit", true, [10,20]);
+VM618:2 I am the Show 
+undefined
+function show(){
+    console.log("I am the Show ", arguments.length);
+}
+undefined
+show(10,20);
+VM847:2 I am the Show  2
+undefined
+show();
+VM847:2 I am the Show  0
+undefined
+show(10,20,30);
+VM847:2 I am the Show  3
+undefined
+show(10,20,30, "Amit");
+VM847:2 I am the Show  4
+undefined
+show(10,20,30, "Amit", true);
+VM847:2 I am the Show  5
+undefined
+show(10,20,30, "Amit", true,[10,20,30]);
+VM847:2 I am the Show  6
+undefined
+var arr = [10,20,30,40,50];
+undefined
+arr.push(1000);
+6
+arr;
+(6) [10, 20, 30, 40, 50, 1000]
+arr.unshift(2000);
+7
+arr;
+(7) [2000, 10, 20, 30, 40, 50, 1000]
+typeof arr;
+'object'
+function add(x,y){
+    return x + y;
+}
+undefined
+add(10,20);
+30
+add(10,20,90);
+30
+add(10);
+NaN
+10 + undefined;
+NaN
+var a=10;
+undefined
+typeof a;
+'number'
+a= a + undefined;
+NaN
+a;
+NaN
+typeof a;
+'number'
+isNaN(a);
+true
+isNaN(a)?0:a;
+0
+a=100;
+100
+isNaN(a)?0:a;
+100
+a = 10/0;
+Infinity
+typeof a;
+'number'
+10 + NaN;
+NaN
+10 + Infinity;
+Infinity
+NaN+ Infinity;
+NaN
+isFinite(a);
+false
+a;
+Infinity
+isFinite(a)?a:0;
+0
+Infinity + Infinity;
+Infinity
+arr;
+(7) [2000, 10, 20, 30, 40, 50, 1000]
+arr instanceof Array;
+true
+typeof Array;
+'function'
+arr.__proto__;
+[at: ƒ, concat: ƒ, copyWithin: ƒ, fill: ƒ, find: ƒ, …]
+arr.__proto__ == Array.prototype;
+true
+arr.__proto__.__proto__ == Array.prototype;
+false
+arr.__proto__.__proto__ == Object.prototype;
+true
+typeof Object;
+'function'
+var x = 10;
+undefined
+typeof x;
+'number'
+var arr = [10,20,30];
+undefined
+typeof arr;
+'object'
+arr.push(10000:
+VM2279:1 Uncaught SyntaxError: missing ) after argument list
+arr.push(10000);
+4
+arr;
+(4) [10, 20, 30, 10000]
+x;
+10
+x + 1;
+11
+x;
+10
+x = x + 1;
+11
+x;
+11
+var name = "Amit";
+undefined
+typeof name;
+'string'
+name.toUpperCase();
+'AMIT'
+name;
+'Amit'
+typeof name;
+'string'
+typeof name;
+'string'
+var price = 100000;
+undefined
+price.toLocaleString('en-US');
+'100,000'
+price;
+100000
+price.toLocaleString('hi-IN');
+'1,00,000'
+price.toLocaleString('fr-FR');
+'100 000'
+var a = "Amit";
+undefined
+typeof a;
+'string'
+var b = new String("Amit");
+undefined
+typeof b;
+'object'
+var c = new Number(100);
+undefined
+typeof c;
+'object'
+var d = 1000;
+undefined
+typeof d;
+'number'
+arr;
+(4) [10, 20, 30, 10000]
+a;
+'Amit'
+typeof a;
+'string'
+a.push(100);
+VM3300:1 Uncaught TypeError: a.push is not a function
+    at <anonymous>:1:3
+(anonymous) @ VM3300:1
+show;
+ƒ show(){
+    console.log("I am the Show ", arguments.length);
+}
+show();
+VM847:2 I am the Show  0
+undefined
+arr.push(1000);
+5
+push(100);
+VM3404:1 Uncaught ReferenceError: push is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM3404:1
+window;
+Window {window: Window, self: Window, document: document, name: 'Amit', location: Location, …}
+typeof window;
+'object'
+show();
+VM847:2 I am the Show  0
+undefined
+window.show();
+VM847:2 I am the Show  0
+undefined
+window.open("https://www.brain-mentors.com");
+Window {window: Window, self: Window, document: document, name: '', location: Location, …}
