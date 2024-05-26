@@ -1,0 +1,269 @@
+// Reference Types
+undefined
+var arr = [10,20,30,40,50];
+undefined
+typeof arr;
+'object'
+var phone = {"ram":9999, "shyam":2222,"tim":3333};
+undefined
+typeof phone;
+'object'
+arr instanceof Array;
+true
+typeof Array;
+'function'
+phone instanceof Array;
+false
+phone instanceof Object;
+true
+typeof Object;
+'function'
+arr;
+(5) [10, 20, 30, 40, 50]
+arr instanceof Array;
+true
+arr instanceof Object;
+true
+arr[0];
+10
+arr[1];
+20
+phones;
+VM648:1 Uncaught ReferenceError: phones is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM648:1
+phone;
+{ram: 9999, shyam: 2222, tim: 3333}
+phone['ram'];
+9999
+phone;
+{ram: 9999, shyam: 2222, tim: 3333}
+arr;
+(5) [10, 20, 30, 40, 50]
+var emp = {id:1001, name:'Ram', age:20, salary:3333};
+undefined
+emp['name'];
+'Ram'
+arr[2];
+30
+emp.name;
+'Ram'
+var msdhoni = {name:'MS Dhoni', age:42, 6:100,50:52,100:20,height:178};
+undefined
+msdhoni.age;
+42
+msdhoni.6;
+VM987:1 Uncaught SyntaxError: Unexpected number
+msdhoni[6];
+100
+msdhoni['name'];
+'MS Dhoni'
+msdhoni;
+{6: 100, 50: 52, 100: 20, name: 'MS Dhoni', age: 42, height: 178}
+msdhoni.city='Mumbai';
+'Mumbai'
+msdhoni;
+{6: 100, 50: 52, 100: 20, name: 'MS Dhoni', age: 42, height: 178, city: 'Mumbai'}
+delete msdhoni.age;
+true
+msdhoni;
+{6: 100, 50: 52, 100: 20, name: 'MS Dhoni', height: 178, city: 'Mumbai'}
+var shoes = [{name:'Puma', price:2000, size:9},{},{}];
+undefined
+shoes[0];
+{name: 'Puma', price: 2000, size: 9}
+shoes[0].name;
+'Puma'
+shoes[0]['name'];
+'Puma'
+msdhoni;
+{6: 100, 50: 52, 100: 20, name: 'MS Dhoni', height: 178, city: 'Mumbai'}
+msdhoni.4=300;
+VM1335:1 Uncaught SyntaxError: Unexpected number
+msdhoni[4]=300;
+300
+msdhoni;
+{4: 300, 6: 100, 50: 52, 100: 20, name: 'MS Dhoni', height: 178, city: 'Mumbai'}
+msdhoni[4];
+300
+msdhoni.4;
+VM1397:1 Uncaught SyntaxError: Unexpected number
+msdhoni.country name = 'India';
+VM1459:1 Uncaught SyntaxError: Unexpected identifier 'name'
+msdhoni['country name'] = 'India';
+'India'
+msdhoni;
+{4: 300, 6: 100, 50: 52, 100: 20, name: 'MS Dhoni', height: 178, city: 'Mumbai', country name: 'India'}
+msdhoni['coun
+VM1519:1 Uncaught SyntaxError: Invalid or unexpected token
+msdhoni['country name'];
+'India'
+msdhoni;
+{4: 300, 6: 100, 50: 52, 100: 20, name: 'MS Dhoni', height: 178, city: 'Mumbai', country name: 'India'}
+msdhoni.name;
+'MS Dhoni'
+var x = 'name';
+undefined
+msdhoni.x;
+undefined
+msdhoni[x];
+'MS Dhoni'
+// for in loop
+for(var key in msdhoni){
+    console.log(key);
+}
+VM1747:3 4
+VM1747:3 6
+VM1747:3 50
+VM1747:3 100
+VM1747:3 name
+VM1747:3 height
+VM1747:3 city
+VM1747:3 country name
+undefined
+// for in loop
+for(var key in msdhoni){
+    console.log(key+" " + msdhoni[key]);
+}
+VM1811:3 4 300
+VM1811:3 6 100
+VM1811:3 50 52
+VM1811:3 100 20
+VM1811:3 name MS Dhoni
+VM1811:3 height 178
+VM1811:3 city Mumbai
+VM1811:3 country name India
+undefined
+var shoes = [{name:'puma', price:1000, size:8},{name:'nike', price:2000, size:9}];
+undefined
+for(var i = 0; i<shoes.length; i++){
+    var shoe = shoes[i];
+    for(var key in shoe){
+        console.log(key + " " +shoe[key]);
+    }
+}
+VM2092:4 name puma
+VM2092:4 price 1000
+VM2092:4 size 8
+VM2092:4 name nike
+VM2092:4 price 2000
+VM2092:4 size 9
+undefined
+for(var shoe of shoes){
+    
+    for(var key in shoe){
+        console.log(key + " " +shoe[key]);
+    }
+}
+VM2111:4 name puma
+VM2111:4 price 1000
+VM2111:4 size 8
+VM2111:4 name nike
+VM2111:4 price 2000
+VM2111:4 size 9
+undefined
+arr;
+(5) [10, 20, 30, 40, 50]
+arr.forEach
+ƒ forEach() { [native code] }
+typeof arr.forEach;
+'function'
+function show(){
+    console.log('I am the show ');
+}
+undefined
+show();
+VM2239:2 I am the show 
+undefined
+typeof show;
+'function'
+var t = show;
+undefined
+t;
+ƒ show(){
+    console.log('I am the show ');
+}
+typeof t;
+'function'
+t();
+VM2239:2 I am the show 
+undefined
+function add(x,y){
+    return x + y;
+}
+undefined
+add(10,20);
+30
+add([10,20],[90,100]);
+'10,2090,100'
+add(show, show);
+"function show(){\n    console.log('I am the show ');\n}function show(){\n    console.log('I am the show ');\n}"
+function getFirstNumber(){
+    return 100;
+}
+undefined
+function getSecondNumber(){
+    return 200;
+}
+undefined
+add(10,20);
+30
+add(getFirstNumber, getSecondNumber);
+'function getFirstNumber(){\n    return 100;\n}function getSecondNumber(){\n    return 200;\n}'
+function add(x,y){
+    if(typeof x ==='function'){
+    x= x();
+    }
+     if(typeof y ==='function'){
+    y= y();
+    }
+    return x + y;
+}
+undefined
+add(10,20);
+30
+add(getFirstNumber, getSecondNumber);
+300
+add([10,20,30],[90,100]);
+'10,20,3090,100'
+function add(x,y){
+    if(typeof x ==='function'){
+    x= x();
+    }
+     if(typeof y ==='function'){
+    y= y();
+    }
+    var sum =0;
+    if(x instanceof Array){
+        for(var w of x){
+            sum = sum + w;
+        }
+    }
+    if(y instanceof Array){
+        for(var w of y){
+            sum = sum + w;
+        }
+    }
+    return sum==0?(x + y):sum;
+}
+undefined
+add([10,20,30],[90,100]);
+250
+function orderPizza(callBackFn){
+    console.log('Logic to Prepare Pizza');
+    for(var i = 1; i<=100000; i++){
+        for(var j = 1; j<=100000; j++){
+            
+        }
+    }
+    console.log('Pizza is ready ');
+    callBackFn();
+}
+function eatPizza(){
+    console.log('Eat Pizza');
+}
+orderPizza(eatPizza);
+VM3643:2 Logic to Prepare Pizza
+VM3643:8 Pizza is ready 
+VM3643:12 Eat Pizza
+undefined
