@@ -1,0 +1,46 @@
+var a;
+undefined
+typeof a;
+'undefined'
+a=10;
+10
+typeof a;
+'number'
+a='Amit';
+'Amit'
+typeof a;
+'string'
+typeof (a);
+'string'
+typeof (2 + 3)
+'number'
+typeof ((2 + 3)*5)
+'number'
+typeof (2+3+"Amit")
+'string'
+var a= 100;
+undefined
+var b = a;
+undefined
+b;
+100
+a;
+100
+b + 1;
+101
+b;
+100
+b = b + 1;
+101
+var a = [10,20,30];
+undefined
+var b = a;
+undefined
+a[0]=1000;
+1000
+a;
+(3) [1000, 20, 30]
+b;
+(3) [1000, 20, 30]
+a==b;
+true

@@ -1,0 +1,8 @@
+var a = 10;
+undefined
+a instanceof Array;
+false
+a instanceof Number;
+false
+typeof a;
+'number'

@@ -1,0 +1,207 @@
+var arr = [10,20,30,40,50];
+undefined
+typeof arr;
+'object'
+arr.forEach;
+ƒ forEach() { [native code] }
+arr.forEach(function(e){
+    console.log(e);
+})
+VM213:2 10
+VM213:2 20
+VM213:2 30
+VM213:2 40
+VM213:2 50
+undefined
+arr.forEach(function(e){
+    console.log('Value is ',e);
+})
+VM238:2 Value is  10
+VM238:2 Value is  20
+VM238:2 Value is  30
+VM238:2 Value is  40
+VM238:2 Value is  50
+undefined
+arr.forEach(function(e,i){
+    console.log('Value is ',e, ' Index is ', i);
+})
+VM294:2 Value is  10  Index is  0
+VM294:2 Value is  20  Index is  1
+VM294:2 Value is  30  Index is  2
+VM294:2 Value is  40  Index is  3
+VM294:2 Value is  50  Index is  4
+undefined
+arr.forEach(function(e,i,a){
+    console.log('Value is ',e, ' Index is ', i, 'Array ', a);
+})
+VM341:2 Value is  10  Index is  0 Array  (5) [10, 20, 30, 40, 50]
+VM341:2 Value is  20  Index is  1 Array  (5) [10, 20, 30, 40, 50]
+VM341:2 Value is  30  Index is  2 Array  (5) [10, 20, 30, 40, 50]0: 101: 202: 303: 404: 50length: 5[[Prototype]]: Array(0)
+VM341:2 Value is  40  Index is  3 Array  (5) [10, 20, 30, 40, 50]
+VM341:2 Value is  50  Index is  4 Array  (5) [10, 20, 30, 40, 50]
+undefined
+var w = [10,20,30];
+undefined
+w[0] = 1111;
+1111
+w;
+(3) [1111, 20, 30]
+var emp = {id:1001, name:'Amit', salary: 99999};
+undefined
+emp['id'] = 1002;
+1002
+emp;
+{id: 1002, name: 'Amit', salary: 99999}
+w.push(999);
+4
+w;
+(4) [1111, 20, 30, 999]
+2;
+2
+w;
+(4) [1111, 20, 30, 999]
+w.splice(1,2);
+(2) [20, 30]
+w;
+(2) [1111, 999]
+w;
+(2) [1111, 999]
+w = [10,20,30,40];
+(4) [10, 20, 30, 40]
+w.splice(1,0,90);
+[]
+w;
+(5) [10, 90, 20, 30, 40]
+var student = {rollno : 1001, course:['JS', 'ReactJs'], name:'Tim', address:{city:'Delhi', street:'1'}};
+undefined
+student['rollno'];
+1001
+student['course'][0];
+'JS'
+student['address']['city'];
+'Delhi'
+student['address']['areacode']=100;
+100
+student['address']['areacode'];
+100
+student;
+{rollno: 1001, course: Array(2), name: 'Tim', address: {…}}address: areacode: 100city: "Delhi"street: "1"[[Prototype]]: Objectcourse: Array(2)0: "JS"1: "ReactJs"length: 2[[Prototype]]: Array(0)name: "Tim"rollno: 1001[[Prototype]]: Object
+for(var key in student){
+    console.log(key);
+}
+VM1281:2 rollno
+VM1281:2 course
+VM1281:2 name
+VM1281:2 address
+undefined
+for(var key in student){
+    console.log(key);
+    if(student[key] instanceof Array){
+        for(var val of student[key]){
+            console.log('Array ', val);
+        }
+    }
+    else if(student[key] instanceof Object){
+        for(var k in student[key]){
+            console.log('Key ', k, 'Value ', student[key][k]);
+        }
+    }
+    else{
+    console.log(student[key]);
+    }
+}
+VM1832:2 rollno
+VM1832:14 1001
+VM1832:2 course
+VM1832:5 Array  JS
+VM1832:5 Array  ReactJs
+VM1832:2 name
+VM1832:14 Tim
+VM1832:2 address
+VM1832:10 Key  city Value  Delhi
+VM1832:10 Key  street Value  1
+VM1832:10 Key  areacode Value  100
+undefined
+10 + 20
+30
+console.log("Hello JS");
+VM1905:1 Hello JS
+undefined
+isFinite(10/0);
+false
+var a = 100;
+undefined
+var q = [10,20,30];
+undefined
+var p = q;
+undefined
+p[0]++;
+10
+p;
+(3) [11, 20, 30]
+q;
+(3) [11, 20, 30]
+var prices = [1000,2000,3000];
+undefined
+var pricesWithTax = [];
+undefined
+for(var price of prices){
+    pricesWithTax.push(price);
+}
+3
+prices;
+(3) [1000, 2000, 3000]
+pricesWithTax;
+(3) [1000, 2000, 3000]
+prices == pricesWithTax;
+false
+pricesWithTax[0] = pricesWithTax[0] + 10;
+1010
+pricesWithTax;
+(3) [1010, 2000, 3000]
+prices;
+(3) [1000, 2000, 3000]
+var p = [...prices]
+undefined
+p;
+(3) [1000, 2000, 3000]
+prices == p;
+false
+prices;
+(3) [1000, 2000, 3000]
+p[0]++;
+1000
+p;
+(3) [1001, 2000, 3000]
+prices;
+(3) [1000, 2000, 3000]
+var r = 100;
+undefined
+var e = r;
+undefined
+e++;
+100
+e;
+101
+r;
+100
+var obj = new Number(1000);
+undefined
+obj;
+Number {1000}
+typeof obj;
+'object'
+var obj2  = obj;
+undefined
+obj2;
+Number {1000}
+obj2 == obj;
+true
+obj++;
+1000
+obj;
+1001
+obj2;
+Number {1000}
+typeof obj;
+'number'
