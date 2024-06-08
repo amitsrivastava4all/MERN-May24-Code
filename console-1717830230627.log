@@ -1,0 +1,98 @@
+// Arrow Function - ES6 
+undefined
+const show = ()=>1000;
+
+undefined
+function show1(){
+    return 1000;
+}
+undefined
+const add = (x,y)=>{
+    console.log('X is ', x , 'Y is ', y);
+    return x + y;
+}
+undefined
+add(10,20);
+VM400:2 X is  10 Y is  20
+30
+typeof add;
+'function'
+const adder = x=>x * x;
+undefined
+const square = x=>x * x;
+undefined
+square(5);
+25
+function test(){
+    console.log('I am Test ');
+}
+undefined
+test();
+VM608:2 I am Test 
+undefined
+window.test;
+ƒ test(){
+    console.log('I am Test ');
+}
+function test(){
+    console.log('I am Test ', this);
+}
+undefined
+test();
+VM684:2 I am Test  Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+undefined
+window.test();
+VM684:2 I am Test  Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+undefined
+var t = new test();
+VM684:2 I am Test  test {}
+undefined
+window.test(); 
+VM684:2 I am Test  Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+undefined
+test.constructor;
+ƒ Function() { [native code] }
+show();
+1000
+var s = new show();
+VM911:1 Uncaught TypeError: show is not a constructor
+    at <anonymous>:1:9
+(anonymous) @ VM911:1
+const show2 = ()=>{
+    consoloe.log('this ', this);
+}
+undefined
+show2();
+VM1035:2 Uncaught ReferenceError: consoloe is not defined
+    at show2 (<anonymous>:2:5)
+    at <anonymous>:1:1
+show2 @ VM1035:2
+(anonymous) @ VM1058:1
+const show2 = ()=>{
+    console.log('this ', this);
+}
+undefined
+show2();
+VM1063:2 this  Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+undefined
+window.show2();
+VM1124:1 Uncaught TypeError: window.show2 is not a function
+    at <anonymous>:1:8
+(anonymous) @ VM1124:1
+window.show2;
+undefined
+show2(); 
+VM1063:2 this  Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+undefined
+show2;
+()=>{
+    console.log('this ', this);
+}
+show.constructor;
+ƒ Function() { [native code] }
+show2.constructor;
+ƒ Function() { [native code] }
+var d = new show2();
+VM1363:1 Uncaught TypeError: show2 is not a constructor
+    at <anonymous>:1:9
+(anonymous) @ VM1363:1
