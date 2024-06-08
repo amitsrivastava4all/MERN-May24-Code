@@ -1,0 +1,63 @@
+// Array with Arrow Fn
+undefined
+var arr = [10,20,30,40,50];
+undefined
+arr.forEach(e=>console.log(e));
+VM227:1 10
+VM227:1 20
+VM227:1 30
+VM227:1 40
+VM227:1 50
+undefined
+arr.forEach((e,i)=>console.log(e, i));
+VM252:1 10 0
+VM252:1 20 1
+VM252:1 30 2
+VM252:1 40 3
+VM252:1 50 4
+undefined
+arr.forEach((e,i, a)=>console.log(e, i, a));
+VM294:1 10 0 (5) [10, 20, 30, 40, 50]
+VM294:1 20 1 (5) [10, 20, 30, 40, 50]
+VM294:1 30 2 (5) [10, 20, 30, 40, 50]
+VM294:1 40 3 (5) [10, 20, 30, 40, 50]
+VM294:1 50 4 (5) [10, 20, 30, 40, 50]
+undefined
+arr.find(e=>e==30);
+30
+arr.find(e=>e==300);
+undefined
+arr.findIndex(e=>e==30);
+2
+arr;
+(5) [10, 20, 30, 40, 50]
+arr.findIndex(e=>e==300);
+-1
+arr = [10,20,30,40,30,70,30,90];
+(8) [10, 20, 30, 40, 30, 70, 30, 90]
+arr.findIndex(e=>e==30);
+2
+arr.findLastIndex(e=>e==30);
+6
+var sub = arr.filter(e=>e==30);
+undefined
+sub;
+(3) [30, 30, 30]
+arr.filter(e=>e==30).length;
+3
+var prices = [100,200,300,400,99,55,33,22];
+undefined
+var gst = prices.map(price=>price + price * 0.18);
+undefined
+gst;
+(8) [118, 236, 354, 472, 116.82, 64.9, 38.94, 25.96]
+arr;
+(8) [10, 20, 30, 40, 30, 70, 30, 90]
+arr.reduce((acc, element)=>acc + element, 0);
+320
+arr.every(e=>e>30);
+false
+arr;
+(8) [10, 20, 30, 40, 30, 70, 30, 90]
+arr.some(e=>e>30);
+true
