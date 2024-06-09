@@ -1,0 +1,36 @@
+const products = [{id:1001, name:'Puma', price:2000}, {id:1002, name:'Nike', price:3000}, {id:1003, name:'adidas', price:3400}];
+undefined
+typeof products;
+'object'
+products instanceof Array;
+true
+const aux = products.filter(product=>true)
+undefined
+aux == products;
+false
+const aux2 = products.map(product=>product)
+undefined
+aux2 == products;
+false
+const aux3 = products.reduce((aux3, product)=>{
+    aux3.push(product);
+    return aux3;
+},[]);
+undefined
+aux3;
+(3) [{…}, {…}, {…}]0: {id: 1001, name: 'Puma', price: 2000}1: {id: 1002, name: 'Nike', price: 3000}2: {id: 1003, name: 'adidas', price: 3400}length: 3[[Prototype]]: Array(0)
+aux3 == products;
+false
+const aux3 = products.reduce((acc, product)=>{
+    acc.push(product);
+    return acc;
+},[]);
+undefined
+aux3 == products;
+false
+products.filter(product=>product.price>2000);
+(2) [{…}, {…}]0: {id: 1002, name: 'Nike', price: 3000}1: {id: 1003, name: 'adidas', price: 3400}length: 2[[Prototype]]: Array(0)
+products = products.filter(product=>product.price<=2000);
+VM1129:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:10
+(anonymous) @ VM1129:1

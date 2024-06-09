@@ -1,0 +1,33 @@
+function counter(){
+    var count = 0;
+    count++;
+    return count;
+}
+undefined
+counter();
+1
+counter();
+1
+counter();
+1
+var count = 0;
+function counter(){
+    
+    count++;
+    return count;
+}
+undefined
+window.count;
+0
+counter();
+1
+counter();
+2
+counter();
+3
+counter();
+4
+count = "Amit";
+'Amit'
+counter();
+NaN

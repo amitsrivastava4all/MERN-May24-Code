@@ -1,0 +1,114 @@
+var products = [{id:1001, name:'Puma', price:2000}, {id:1002, name:'Nike', price:3000}, {id:1003, name:'adidas', price:3400}];
+undefined
+products = products.filter(product=>product.price<=2000);
+[{…}]
+products;
+[{…}]0: {id: 1001, name: 'Puma', price: 2000}length: 1[[Prototype]]: Array(0)
+var products = [{id:1001, name:'Puma', price:2000}, {id:1002, name:'Nike', price:3000}, {id:1003, name:'adidas', price:3400}];
+undefined
+products.reduce((max,product)=>{
+    if(product.price>max){
+        max = product.price;
+    }
+    return max;
+}, 0);
+3400
+products.reduce((min,product)=>{
+    if(product.price<min){
+        min = product.price;
+    }
+    return min;
+}, Number.MAX_SAFE_INTEGER);
+2000
+var price = 294490;
+undefined
+price.toLocaleString('hi');
+'2,94,490'
+price.toLocaleString('en');
+'294,490'
+products.map(product=>product.price.toLocaleString('hi'));
+(3) ['2,000', '3,000', '3,400']
+products.map(product=>product.price.toLocaleString('hi'));
+(3) ['2,000', '3,000', '3,400']
+var arr2 = products.map(product=>product);
+undefined
+arr2;
+(3) [{…}, {…}, {…}]0: {id: 1001, name: 'Puma', price: 2000}1: {id: 1002, name: 'Nike', price: 3000}2: {id: 1003, name: 'adidas', price: 3400}length: 3[[Prototype]]: Array(0)
+products;
+(3) [{…}, {…}, {…}]0: {id: 1001, name: 'Puma', price: 2000}1: {id: 1002, name: 'Nike', price: 3000}2: {id: 1003, name: 'adidas', price: 3400}length: 3[[Prototype]]: Array(0)
+arr2[0];
+{id: 1001, name: 'Puma', price: 2000}
+products[0];
+{id: 1001, name: 'Puma', price: 2000}
+arr2[0] == products[0];
+true
+arr[0].price = 1200;
+VM1106:1 Uncaught ReferenceError: arr is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM1106:1
+arr2[0].price = 1200;
+1200
+arr2[0];
+{id: 1001, name: 'Puma', price: 1200}
+products[0];
+{id: 1001, name: 'Puma', price: 1200}
+products.map(product=>{...product});
+VM1342:1 Uncaught SyntaxError: Unexpected token '...'
+products.map(product=>...product);
+VM1428:1 Uncaught SyntaxError: Unexpected token '...'
+products.map(product=>{...product});
+VM1447:1 Uncaught SyntaxError: Unexpected token '...'
+products.map(product=>({...product}));
+(3) [{…}, {…}, {…}]0: {id: 1001, name: 'Puma', price: 1200}1: {id: 1002, name: 'Nike', price: 3000}2: {id: 1003, name: 'adidas', price: 3400}length: 3[[Prototype]]: Array(0)
+var arr4 = products.map(product=>({...product}));
+undefined
+arr4[0] == products[0];
+false
+arr4[0].price = 1500;
+1500
+arr4[0];
+{id: 1001, name: 'Puma', price: 1500}
+products[0];
+{id: 1001, name: 'Puma', price: 1200}
+var arr5 = products.map(product=>({...product, price: product.price.toLocaleString('hi')})
+VM1865:1 Uncaught SyntaxError: missing ) after argument list
+var arr5 = products.map(product=>({...product, price: product.price.toLocaleString('hi')}));
+undefined
+var arr5 = products.map(product=>({...product, price: product.price.toLocaleString('hi')}));
+undefined
+arr5;
+(3) [{…}, {…}, {…}]0: {id: 1001, name: 'Puma', price: '1,200'}1: {id: 1002, name: 'Nike', price: '3,000'}2: {id: 1003, name: 'adidas', price: '3,400'}length: 3[[Prototype]]: Array(0)
+products;
+(3) [{…}, {…}, {…}]0: {id: 1001, name: 'Puma', price: 1200}1: {id: 1002, name: 'Nike', price: 3000}2: {id: 1003, name: 'adidas', price: 3400}length: 3[[Prototype]]: Array(0)
+var arr = [10,20,30,40,1, 90, 2];
+undefined
+arr.sort((first,second)=>first - second);
+(7) [1, 2, 10, 20, 30, 40, 90]
+arr.sort((first,second)=>second - first);
+(7) [90, 40, 30, 20, 10, 2, 1]
+var names = ["ram","amit","shyam"];
+undefined
+"ram" - "amit";
+NaN
+"ram".localeCompare("amit");
+1
+"amit".localeCompare("ram");
+-1
+"amit".localeCompare("amit");
+0
+names.sort((a,b)=>a.localeCompare(b));
+(3) ['amit', 'ram', 'shyam']
+names.sort((a,b)=>b.localeCompare(a));
+(3) ['shyam', 'ram', 'amit']
+products;
+(3) [{…}, {…}, {…}]0: {id: 1001, name: 'Puma', price: 1200}1: {id: 1002, name: 'Nike', price: 3000}2: {id: 1003, name: 'adidas', price: 3400}length: 3[[Prototype]]: Array(0)
+products.sort((a,b)=>a.price - b.price);
+(3) [{…}, {…}, {…}]0: {id: 1001, name: 'Puma', price: 1200}1: {id: 1002, name: 'Nike', price: 3000}2: {id: 1003, name: 'adidas', price: 3400}length: 3[[Prototype]]: Array(0)
+products.sort((a,b)=>b.price - a.price);
+(3) [{…}, {…}, {…}]0: {id: 1003, name: 'adidas', price: 3400}1: {id: 1002, name: 'Nike', price: 3000}2: {id: 1001, name: 'Puma', price: 1200}length: 3[[Prototype]]: Array(0)
+var arr = ["amit", true, 1000, [90, true], {id:1001}];
+undefined
+products;
+(3) [{…}, {…}, {…}]0: {id: 1003, name: 'adidas', price: 3400}1: {id: 1002, name: 'Nike', price: 3000}2: {id: 1001, name: 'Puma', price: 1200}length: 3[[Prototype]]: Array(0)
+products.map(product=>`<h1> ${product.name} ${product.price} </h1>`);
+(3) ['<h1> adidas 3400 </h1>', '<h1> Nike 3000 </h1>', '<h1> Puma 1200 </h1>']0: "<h1> adidas 3400 </h1>"1: "<h1> Nike 3000 </h1>"2: "<h1> Puma 1200 </h1>"length: 3[[Prototype]]: Array(0)

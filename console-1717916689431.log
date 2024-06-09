@@ -1,0 +1,37 @@
+function init(){
+    var count = 0;
+   return function plus(){
+        count++;
+        return count;
+    }
+}
+undefined
+var fn = init();
+undefined
+fn;
+ƒ plus(){
+        count++;
+        return count;
+    }
+typeof fn;
+'function'
+console.dir(fn);
+VM234:1 ƒ plus()arguments: nullcaller: nulllength: 0name: "plus"prototype: {}[[FunctionLocation]]: VM122:3[[Prototype]]: ƒ ()[[Scopes]]: Scopes[2]0: Closure (init) {count: 0}1: Global {window: Window, self: Window, document: document, name: '', location: Location, …}
+undefined
+fn();
+1
+fn();
+2
+fn();
+3
+fn();
+4
+fn();
+5
+console.dir(fn);
+VM275:1 ƒ plus()arguments: nullcaller: nulllength: 0name: "plus"prototype: {}[[FunctionLocation]]: VM122:3[[Prototype]]: ƒ ()[[Scopes]]: Scopes[2]0: Closure (init) {count: 5}1: Global {window: Window, self: Window, document: document, name: '', location: Location, …}
+undefined
+count;
+VM289:1 Uncaught ReferenceError: count is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM289:1
