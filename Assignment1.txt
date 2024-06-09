@@ -1,0 +1,17 @@
+1. Prepare a Product (id , name , price) Array , contains the price of shoes
+
+a) Make a Copy of the shoes array into aux array
+With out spread operator
+Suggest 2 or 3 ways 
+
+b) Delete those prices whose price > 2000 rs
+Hint : pop, splice
+
+
+c) Find out the Max and Min Price in shoes array
+
+d) Store all the shoes prices in Currency Format 
+e.g 1000
+Rs 1,000
+
+E) Show shoes in Ascending Orders by Price or by name
