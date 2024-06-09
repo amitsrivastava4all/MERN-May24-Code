@@ -1,0 +1,9 @@
+Build Calculator by without declare global variables 
+
+First, second
+add()
+sub()
+mul()
+divide()
+
+First and Second are shared to all the functions
