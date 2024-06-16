@@ -1,0 +1,32 @@
+var arr = [10,20,30,40,50,60];
+undefined
+var t = arr.map(currentValue=>currentValue * currentValue)
+undefined
+arr.reduce((sum, val)=>sum+val, 0);
+210
+arr.reduce((sum, val)=>sum+val);
+210
+arr.reduce((a, val)=>{
+    a.push(val * val);
+    return a;
+}, []);
+(6) [100, 400, 900, 1600, 2500, 3600]
+var price = [1000,2000,3000,4000,5000];
+undefined
+var r = "Rs 2,000";
+undefined
+var t = 6784368645;
+undefined
+t.toLocaleString('hi');
+'6,78,43,68,645'
+t.toLocaleString('en');
+'6,784,368,645'
+t.toLocaleString('fr');
+'6 784 368 645'
+price.reduce((a, p)=>{
+    a.push(p.toLocaleString('hi'));
+    return a;
+},[]);
+(5) ['1,000', '2,000', '3,000', '4,000', '5,000']
+price.map(p=>p.toLocaleString('hi'));
+(5) ['1,000', '2,000', '3,000', '4,000', '5,000']

@@ -1,0 +1,35 @@
+var a = 10;
+undefined
+typeof a;
+'number'
+a = "Amit";
+'Amit'
+typeof a;
+'string'
+a = true;
+true
+typeof a;
+'boolean'
+a = [10,20,30];
+(3) [10, 20, 30]
+typeof a;
+'object'
+var b = [100,200,300];
+undefined
+var c = [...a, ...b];
+undefined
+c;
+(6) [10, 20, 30, 100, 200, 300]
+function show(){
+    console.log('I am show ');
+}
+undefined
+show();
+VM372:2 I am show 
+undefined
+show(10,20);
+VM372:2 I am show 
+undefined
+show(100,20,300, 40 ,50);
+VM372:2 I am show 
+undefined

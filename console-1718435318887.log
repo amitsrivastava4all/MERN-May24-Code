@@ -1,0 +1,166 @@
+function add(x,y){
+    return x + y;
+}
+undefined
+add(10,20);
+30
+add(100,200);
+300
+add(10,20);
+30
+function Customer(id, name){
+    // this - it is a keyword
+    // It hold the current calling object reference
+    this.id = id;
+    this.name = name;
+}
+var ram = new Customer(1001, 'Ram');
+undefined
+ram;
+Customer {id: 1001, name: 'Ram'}
+typeof ram;
+'object'
+ram instanceof Customer;
+true
+function Math(){
+function cos(){
+    console.log('Cos');
+}
+function sin(){
+    console.log('Sin');
+}
+function sqrt(){
+    console.log('Sqrt');
+}
+    return [cos, sin, sqrt];
+}
+undefined
+var f = Math();
+undefined
+f;
+(3) [ƒ, ƒ, ƒ]
+f[0]();
+VM728:3 Cos
+undefined
+f[1]();
+VM728:6 Sin
+undefined
+function Math(){
+var cos  = function (){
+    console.log('Cos');
+}
+var sin= function(){
+    console.log('Sin');
+}
+var sqrt = function(){
+    console.log('Sqrt');
+}
+    return [cos, sin, sqrt];
+}
+undefined
+add;
+ƒ add(x,y){
+    return x + y;
+}
+var s = add(10,20);
+undefined
+s;
+30
+typeof s;
+'number'
+var t = add;
+undefined
+typeof t;
+'function'
+add;
+ƒ add(x,y){
+    return x + y;
+}
+t;
+ƒ add(x,y){
+    return x + y;
+}
+t(10,20);
+30
+function Math(){
+var cos  = function (){
+    return console.log('Cos');
+}
+var sin= function(){
+    console.log('Sin');
+}
+var sqrt = function(){
+    console.log('Sqrt');
+}
+    return [cos, sin, sqrt];
+}
+undefined
+console.log('Hi JS');
+VM1121:1 Hi JS
+undefined
+function Math(){
+var cos  = function (){
+    return console.log('Cos');
+}
+var sin= function(){
+    console.log('Sin');
+}
+var sqrt = function(){
+    console.log('Sqrt');
+}
+    return [cos, sin, sqrt];
+}
+undefined
+Math()[0]();
+VM1125:3 Cos
+undefined
+function Math(){
+var cos  = function (a,b){
+    //return console.log('Cos');
+    var c= a + b ;
+    return c;
+}
+var sin= function(){
+    console.log('Sin');
+}
+var sqrt = function(){
+    console.log('Sqrt');
+}
+    return [cos, sin, sqrt];
+}
+undefined
+var msdhoni = {age:42, 50:55, worldcup:2};
+undefined
+msdhoni.age;
+42
+msdhoni['age'];
+42
+var virat = {"age":36, 50:105, world cup:2};
+VM1371:1 Uncaught SyntaxError: Unexpected identifier 'cup'
+var virat = {"age":36, 50:105, "world cup":2};
+undefined
+msdhoni.age
+42
+msdhoni.50;
+VM1428:1 Uncaught SyntaxError: Unexpected number
+msdhoni[50]
+55
+msdhoni['age']
+42
+msdhoni.worldcup;
+2
+virat.world cup;
+VM1581:1 Uncaught SyntaxError: Unexpected identifier 'cup'
+virat['world cup'];
+2
+msdhoni;
+{50: 55, age: 42, worldcup: 2}
+JSON.parse(msdhoni);
+VM1705:1 Uncaught SyntaxError: "[object Object]" is not valid JSON
+    at JSON.parse (<anonymous>)
+    at <anonymous>:1:6
+(anonymous) @ VM1704:1
+var obj = {id:1001, name:'Ram', salary:9999};
+undefined
+JSON.stringify(msdhoni);
+'{"50":55,"age":42,"worldcup":2}'
