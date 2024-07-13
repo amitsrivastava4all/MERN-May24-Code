@@ -1,0 +1,85 @@
+console.log('Code Starts');
+var a = 10;
+var b= 20;
+var c= a+ b;
+setTimeout(function(){
+    console.log('I will run after 5 sec ');
+},5000);
+console.log('Sum is ', c);
+console.log('Code Ends' );
+VM447:1 Code Starts
+VM447:8 Sum is  30
+VM447:9 Code Ends
+undefined
+VM447:6 I will run after 5 sec 
+console.log('Code Starts');
+var a = 10;
+var b= 20;
+var c= a+ b;
+setTimeout(function(){
+    console.log('I will run after 5 sec ');
+},0);
+console.log('Sum is ', c);
+console.log('Code Ends' );
+VM452:1 Code Starts
+VM452:8 Sum is  30
+VM452:9 Code Ends
+undefined
+VM452:6 I will run after 5 sec 
+function sync(cube){
+    return cube **3;
+}
+var r = sync(5); // call + wait + result
+console.log('Sync Result ' ,r);
+function asyncFn(cube){
+    setTimeout(function(){
+        return cube ** 3
+    },5000);
+  //  return undefined;
+}
+var r2 = asyncFn(4);
+console.log('Async Result', r2);
+VM876:5 Sync Result  125
+VM876:13 Async Result undefined
+undefined
+function sync(cube){
+    return cube **3;
+}
+var r = sync(5); // call + wait + result
+console.log('Sync Result ' ,r);
+function asyncFn(cube){
+    setTimeout(function(){
+        console.log('Run After 5 sec ', cube**3);
+        return cube ** 3
+    },5000);
+  //  return undefined;
+}
+var r2 = asyncFn(4);
+console.log('Async Result', r2);
+VM956:5 Sync Result  125
+VM956:14 Async Result undefined
+undefined
+VM956:8 Run After 5 sec  64
+function sync(cube){
+    return cube **3;
+}
+var r = sync(5); // call + wait + result
+console.log('Sync Result ' ,r);
+function getResult(r2){
+    console.log('Async Result is ', r2);
+}
+function asyncFn(cube, fn){
+    setTimeout(function(){
+        console.log('Run After 5 sec ', cube**3);
+        fn(cube**3);
+        //return cube ** 3
+    },5000);
+  //  return undefined;
+}
+asyncFn(4,getResult);
+//var r2 = asyncFn(4); // Call + Forget + callback
+//console.log('Async Result', r2);
+VM1128:5 Sync Result  125
+undefined
+VM1128:11 Run After 5 sec  64
+VM1128:7 Async Result is  64
