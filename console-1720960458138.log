@@ -1,0 +1,38 @@
+function show(){
+    setTimeout(getCountry, 3000);
+}
+show();
+function getCountry(){
+    console.log('Getting the Country ');
+    setTimeout(getState, 2000);
+}
+function getState(){
+    console.log('Get State ');
+    setTimeout(getCity , 1000);
+}
+function getCity(){
+    console.log('Get City ');
+}
+undefined
+VM486:6 Getting the Country 
+VM486:10 Get State 
+VM486:14 Get City 
+function show(){
+    setTimeout(getCountry, 4000);
+}
+show();
+function getCountry(){
+    console.log('Getting the Country ');
+    setTimeout(getState, 3000);
+}
+function getState(){
+    console.log('Get State ');
+    setTimeout(getCity , 4000);
+}
+function getCity(){
+    console.log('Get City ');
+}
+undefined
+VM497:6 Getting the Country 
+VM497:10 Get State 
+VM497:14 Get City 

@@ -1,0 +1,210 @@
+function doWork(cube,callBack){
+    setTimeout(function(){
+        callBack(cube**3);
+    }, 5000);
+}
+console.log('Code Starts ');
+doWork(3,callBack); // Async 
+console.log('Code Ends '); // Sync
+function callBack(data){
+    console.log('Data is ', data);
+}
+VM386:6 Code Starts 
+VM386:8 Code Ends 
+undefined
+VM386:10 Data is  27
+function doWork(cube,callBack){
+    setTimeout(function(){
+        callBack(cube**3);
+    }, 5000);
+}
+console.log('Code Starts ');
+const promise = doWork(3); // Async 
+console.log('Promise is ', promise);
+console.log('Code Ends '); // Sync
+function callBack(data){
+    console.log('Data is ', data);
+}
+VM480:6 Code Starts 
+VM480:8 Promise is  undefined
+VM480:9 Code Ends 
+undefined
+VM480:3 Uncaught TypeError: callBack is not a function
+    at <anonymous>:3:9
+(anonymous) @ VM480:3
+setTimeout (async)
+doWork @ VM480:2
+(anonymous) @ VM480:7
+function doWork(cube){
+    setTimeout(function(){
+       
+    }, 5000);
+}
+console.log('Code Starts ');
+const promise = doWork(3); // Async 
+console.log('Promise is ', promise);
+console.log('Code Ends '); // Sync
+
+VM488:6 Code Starts 
+VM488:8 Promise is  undefined
+VM488:9 Code Ends 
+undefined
+function doWork(cube){
+    const pr = new Promise(function(resolve, reject){
+             setTimeout(function(){
+               resolve(cube ** 3);
+    }, 5000);
+    });
+   return pr;
+}
+console.log('Code Starts ');
+const promise = doWork(3); // Async 
+console.log('Promise is ', promise);
+console.log('Code Ends '); // Sync
+
+VM607:9 Code Starts 
+VM607:11 Promise is  Promise {<pending>}
+VM607:12 Code Ends 
+undefined
+promise;
+Promise {<fulfilled>: 27}
+function doWork(cube){
+    const pr = new Promise(function(resolve, reject){
+             setTimeout(function(){
+               resolve(cube ** 3);
+    }, 5000);
+    });
+   return pr;
+}
+console.log('Code Starts ');
+const promise = doWork(3); // Async 
+promise.then(function(result){
+    console.log('Result is ', result);
+}).catch(function(){
+    console.log('Error is ', err);
+});
+console.log('Promise is ', promise);
+console.log('Code Ends '); // Sync
+
+VM826:9 Code Starts 
+VM826:16 Promise is  Promise {<pending>}
+VM826:17 Code Ends 
+undefined
+VM826:12 Result is  27
+function doWork(cube){
+    const pr = new Promise(function(resolve, reject){
+             setTimeout(function(){
+                 if(cube<10){
+               resolve(cube ** 3);
+                 }
+                 else{
+                     reject("Number is Big can't do Cube ");
+                 }
+    }, 5000);
+    });
+   return pr;
+}
+console.log('Code Starts ');
+const promise = doWork(3); // Async 
+promise.then(function(result){
+    console.log('Result is ', result);
+}).catch(function(){
+    console.log('Error is ', err);
+});
+console.log('Promise is ', promise);
+console.log('Code Ends '); // Sync
+
+VM899:14 Code Starts 
+VM899:21 Promise is  Promise {<pending>}
+VM899:22 Code Ends 
+undefined
+VM899:17 Result is  27
+function doWork(cube){
+    const pr = new Promise(function(resolve, reject){
+             setTimeout(function(){
+                 if(cube<10){
+               resolve(cube ** 3);
+                 }
+                 else{
+                     reject("Number is Big can't do Cube ");
+                 }
+    }, 5000);
+    });
+   return pr;
+}
+console.log('Code Starts ');
+const promise = doWork(20); // Async 
+promise.then(function(result){
+    console.log('Result is ', result);
+}).catch(function(){
+    console.log('Error is ', err);
+});
+console.log('Promise is ', promise);
+console.log('Code Ends '); // Sync
+
+VM909:14 Code Starts 
+VM909:21 Promise is  Promise {<pending>}
+VM909:22 Code Ends 
+undefined
+VM909:19 Uncaught (in promise) ReferenceError: err is not defined
+    at <anonymous>:19:30
+(anonymous) @ VM909:19
+Promise.catch (async)
+(anonymous) @ VM909:18
+function doWork(cube){
+    const pr = new Promise(function(resolve, reject){
+             setTimeout(function(){
+                 if(cube<10){
+               resolve(cube ** 3);
+                 }
+                 else{
+                     reject("Number is Big can't do Cube ");
+                 }
+    }, 5000);
+    });
+   return pr;
+}
+console.log('Code Starts ');
+const promise = doWork(20); // Async 
+promise.then(function(result){
+    console.log('Result is ', result);
+}).catch(function(err){
+    console.log('Error is ', err);
+});
+console.log('Promise is ', promise);
+console.log('Code Ends '); // Sync
+
+VM914:14 Code Starts 
+VM914:21 Promise is  Promise {<pending>}
+VM914:22 Code Ends 
+undefined
+VM914:19 Error is  Number is Big can't do Cube 
+function doWork(cube){
+    const pr = new Promise(function(resolve, reject){
+             // Async Code
+        setTimeout(function(){
+                 if(cube<10){
+               resolve(cube ** 3);
+                 }
+                 else{
+                     reject("Number is Big can't do Cube ");
+                 }
+    }, 5000);
+    });
+   return pr;
+}
+console.log('Code Starts ');
+const promise = doWork(20); // Async 
+promise.then(function(result){
+    console.log('Result is ', result);
+}).catch(function(err){
+    console.log('Error is ', err);
+});
+console.log('Promise is ', promise);
+console.log('Code Ends '); // Sync
+
+VM937:15 Code Starts 
+VM937:22 Promise is  Promise {<pending>}
+VM937:23 Code Ends 
+undefined
+VM937:20 Error is  Number is Big can't do Cube 

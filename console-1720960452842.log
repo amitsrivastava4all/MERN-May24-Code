@@ -1,0 +1,34 @@
+setTimeout(function(){
+    console.log('Async ');
+}, 3000)
+1
+VM96:2 Async 
+setTimeout(function(){
+    console.log('Async ');
+}, 3000)
+2
+VM98:2 Async 
+var e = setInterval(function(){
+    console.log('Set Interval ');
+}, 1000);
+undefined
+VM246:2 Set Interval 
+VM246:2 Set Interval 
+VM246:2 Set Interval 
+VM246:2 Set Interval 
+VM246:2 Set Interval 
+VM246:2 Set Interval 
+VM246:2 Set Interval 
+VM246:2 Set Interval 
+VM246:2 Set Interval 
+VM246:2 Set Interval 
+VM246:2 Set Interval 
+VM246:2 Set Interval 
+VM246:2 Set Interval 
+VM246:2 Set Interval 
+VM246:2 Set Interval 
+VM246:2 Set Interval 
+VM246:2 Set Interval 
+VM246:2 Set Interval 
+clearInterval(e);
+undefined
