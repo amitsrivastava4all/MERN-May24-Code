@@ -1,0 +1,343 @@
+console.log('Code Start ');
+function doWork(num){
+    const promise = new Promise(function(resolve, reject){
+         // Async (Non Blocking) e.g API Call
+    setTimeout(function(){
+        resolve(num **3);
+    }, 3000);
+    });
+   return promise;
+}
+const p = doWork();
+p.then(function(data){
+    console.log('Cube is ', data);
+}).catch(function(err){
+    console.log('Error is ', err);
+});
+console.log('Code Ends ', p); // pending
+
+VM672:1 Code Start 
+VM672:17 Code Ends  Promise {<pending>}
+undefined
+VM672:13 Cube is  NaN
+console.log('Code Start ');
+function doWork(num){
+    const promise = new Promise(function(resolve, reject){
+         // Async (Non Blocking) e.g API Call
+    setTimeout(function(){
+        resolve(num **3);
+    }, 3000);
+    });
+   return promise;
+}
+const p = doWork(3);
+p.then(function(data){
+    console.log('Cube is ', data);
+}).catch(function(err){
+    console.log('Error is ', err);
+});
+console.log('Code Ends ', p); // pending
+
+VM678:1 Code Start 
+VM678:17 Code Ends  Promise {<pending>}
+undefined
+VM678:13 Cube is  27
+function doWork(num, time){
+    const promise = new Promise(function(resolve, reject){
+         // Async (Non Blocking) e.g API Call
+    setTimeout(function(){
+        resolve(num **3);
+    }, time);
+    });
+   return promise;
+}
+undefined
+const p = Promise.all([doWork(2,3000), doWork(3,4000),doWork(5,5000)]);
+p.then(results=>console.log(results)).catch(err=>console.log(err));
+Promise {<pending>}
+VM1121:2 (3) [8, 27, 125]
+function doWork(num, time){
+    const promise = new Promise(function(resolve, reject){
+         // Async (Non Blocking) e.g API Call
+    setTimeout(function(){
+        if(num>10){
+            reject("Number is Big Can't Compute the Cube ");
+        }
+        resolve(num **3);
+    }, time);
+    });
+   return promise;
+}
+undefined
+function doWork(num, time){
+    const promise = new Promise(function(resolve, reject){
+         // Async (Non Blocking) e.g API Call
+    setTimeout(function(){
+        if(num>10){
+            reject("Number is Big Can't Compute the Cube ");
+        }
+        else{
+        resolve(num **3);
+        }
+    }, time);
+    });
+   return promise;
+}
+undefined
+const p = Promise.all([doWork(20,3000), doWork(3,4000),doWork(5,5000)]);
+p.then(results=>console.log(results)).catch(err=>console.log(err));
+Promise {<pending>}
+VM1210:2 Number is Big Can't Compute the Cube 
+const p = Promise.allSettled([doWork(20,3000), doWork(3,4000),doWork(5,5000)]);
+p.then(results=>console.log(results)).catch(err=>console.log(err));
+Promise {<pending>}
+VM1222:2 (3) [{…}, {…}, {…}]0: {status: 'rejected', reason: "Number is Big Can't Compute the Cube "}1: {status: 'fulfilled', value: 27}2: {status: 'fulfilled', value: 125}length: 3[[Prototype]]: Array(0)
+const p = Promise.allSettled([doWork(20,3000), doWork(30,4000),doWork(50,5000)]);
+p.then(results=>console.log(results)).catch(err=>console.log(err));
+Promise {<pending>}
+VM1232:2 (3) [{…}, {…}, {…}]0: {status: 'rejected', reason: "Number is Big Can't Compute the Cube "}1: {status: 'rejected', reason: "Number is Big Can't Compute the Cube "}2: {status: 'rejected', reason: "Number is Big Can't Compute the Cube "}length: 3[[Prototype]]: Array(0)
+function doWork(num, time){
+    console.log('Cube Call ', num);
+    const promise = new Promise(function(resolve, reject){
+         // Async (Non Blocking) e.g API Call
+    setTimeout(function(){
+        if(num>10){
+            reject("Number is Big Can't Compute the Cube ");
+        }
+        else{
+        resolve(num **3);
+        }
+    }, time);
+    });
+   return promise;
+}
+undefined
+const p = Promise.allSettled([doWork(20,3000), doWork(30,4000),doWork(50,5000)]);
+p.then(results=>console.log(results)).catch(err=>console.log(err));
+VM1337:2 Cube Call  20
+VM1337:2 Cube Call  30
+VM1337:2 Cube Call  50
+Promise {<pending>}
+VM1340:2 (3) [{…}, {…}, {…}]0: {status: 'rejected', reason: "Number is Big Can't Compute the Cube "}1: {status: 'rejected', reason: "Number is Big Can't Compute the Cube "}2: {status: 'rejected', reason: "Number is Big Can't Compute the Cube "}length: 3[[Prototype]]: Array(0)
+const p = Promise.race([doWork(2,3000), doWork(3,4000),doWork(5,1000)]);
+p.then(results=>console.log(results)).catch(err=>console.log(err));
+VM1337:2 Cube Call  2
+VM1337:2 Cube Call  3
+VM1337:2 Cube Call  5
+Promise {<pending>}
+VM1361:2 125
+const p = Promise.race([doWork(2,3000), doWork(3,4000),doWork(50,1000)]);
+p.then(results=>console.log(results)).catch(err=>console.log(err));
+VM1337:2 Cube Call  2
+VM1337:2 Cube Call  3
+VM1337:2 Cube Call  50
+Promise {<pending>}
+VM1367:2 Number is Big Can't Compute the Cube 
+const p = Promise.any([doWork(2,3000), doWork(3,4000),doWork(50,1000)]);
+p.then(results=>console.log(results)).catch(err=>console.log(err));
+VM1337:2 Cube Call  2
+VM1337:2 Cube Call  3
+VM1337:2 Cube Call  50
+Promise {<pending>}
+VM1376:2 8
+const p = Promise.any([doWork(12,3000), doWork(13,4000),doWork(50,1000)]);
+p.then(results=>console.log(results)).catch(err=>console.log(err));
+VM1337:2 Cube Call  12
+VM1337:2 Cube Call  13
+VM1337:2 Cube Call  50
+Promise {<pending>}
+VM1382:2 AggregateError: All promises were rejected
+const p = Promise.any([doWork(2,3000), doWork(3,3000),doWork(50,1000)]);
+p.then(results=>console.log(results)).catch(err=>console.log(err));
+VM1337:2 Cube Call  2
+VM1337:2 Cube Call  3
+VM1337:2 Cube Call  50
+Promise {<pending>}
+VM1393:2 8
+const p = Promise.any([doWork(2,3000), doWork(3,3000),doWork(50,1000)]);
+p.then(results=>console.log(results)).catch(err=>console.log(err));
+VM1337:2 Cube Call  2
+VM1337:2 Cube Call  3
+VM1337:2 Cube Call  50
+Promise {<pending>}
+VM1395:2 8
+function doWork(num, time){
+    console.log('Cube Call ', num);
+    const promise = new Promise(function(resolve, reject){
+         // Async (Non Blocking) e.g API Call
+    setTimeout(function(){
+        if(num>200){
+            reject("Number is Big Can't Compute the Cube ");
+        }
+        else{
+        resolve(num **3);
+        }
+    }, time);
+    });
+   return promise;
+}
+undefined
+function doWork(num, time){
+    console.log('Cube Call ', num);
+    const promise = new Promise(function(resolve, reject){
+         // Async (Non Blocking) e.g API Call
+    setTimeout(function(){
+        if(num>20200){
+            reject("Number is Big Can't Compute the Cube ");
+        }
+        else{
+        resolve(num **3);
+        }
+    }, time);
+    });
+   return promise;
+}
+undefined
+function total(){
+   const p =  doWork(2,2000);
+    p.then(function(r){
+        const p2 =  doWork(r,3000);
+        p2.then(function(r2){
+            const p3 =  doWork(r2,3000);
+            p3.then(function(r3){
+                const t = r + r2 + r3;
+                console.log('Total ', t);
+            }).catch(function(err){
+            console.log('Error in r3 call ', err);
+        });
+        }).catch(function(err){
+         console.log('Error in r2 call ', err);
+        });
+    }).catch(function(err){
+         console.log('Error in r call ', err);
+    })
+}
+undefined
+total();
+VM1564:2 Cube Call  2
+undefined
+VM1564:2 Cube Call  8
+VM1564:2 Cube Call  512
+VM1940:9 Total  134218248
+function total(){
+    console.log('Start ');
+    try{
+   const r =  await doWork(2,2000);
+    const r2 =  await doWork(r,3000);
+    const r3 =  await doWork(r2,3000);
+    console.log(r + r2 + r3);
+    }
+    catch(err){
+        console.log('Error in Total ' , err);
+    }
+    
+}
+console.log('Code starts ');
+total();
+console.log('Code Ends ');
+   
+      
+VM2253:4 Uncaught SyntaxError: await is only valid in async functions and the top level bodies of modules
+async function total(){
+    console.log('Start ');
+    try{
+   const r =  await doWork(2,2000);
+    const r2 =  await doWork(r,3000);
+    const r3 =  await doWork(r2,3000);
+    console.log(r + r2 + r3);
+    }
+    catch(err){
+        console.log('Error in Total ' , err);
+    }
+    
+}
+console.log('Code starts ');
+total(); // async
+console.log('Code Ends ');
+   
+      
+VM2267:14 Code starts 
+VM2267:2 Start 
+VM1564:2 Cube Call  2
+VM2267:16 Code Ends 
+undefined
+VM1564:2 Cube Call  8
+VM1564:2 Cube Call  512
+VM2267:7 134218248
+async function total(){
+    console.log('Start ');
+    try{
+   const r =  await doWork(2,2000);
+    const r2 =  await doWork(r,3000);
+    const r3 =  await doWork(r2,3000);
+    console.log(r + r2 + r3);
+        return (r + r2 + r3);
+    }
+    catch(err){
+        console.log('Error in Total ' , err);
+    }
+    
+}
+console.log('Code starts ');
+const p = total(); // async
+p.then(function(r){
+    console.log(r);
+}).catch(function(err){
+    console.log(err));
+});
+console.log('Code Ends ');
+   
+      
+VM2433:20 Uncaught SyntaxError: Unexpected token ')'
+async function total(){
+    console.log('Start ');
+    try{
+   const r =  await doWork(2,2000);
+    const r2 =  await doWork(r,3000);
+    const r3 =  await doWork(r2,3000);
+    console.log(r + r2 + r3);
+        return (r + r2 + r3);
+    }
+    catch(err){
+        console.log('Error in Total ' , err);
+    }
+    
+}
+console.log('Code starts ');
+const p = total(); // async
+p.then(function(r){
+    console.log(r);
+}).catch(function(err){
+    console.log(err);
+});
+console.log('Code Ends ');
+   
+      
+VM2437:15 Code starts 
+VM2437:2 Start 
+VM1564:2 Cube Call  2
+VM2437:22 Code Ends 
+undefined
+VM1564:2 Cube Call  8
+VM1564:2 Cube Call  512
+VM2437:7 134218248
+VM2437:18 134218248
+const URL = 'https://newsapi.org/v2/top-headlines?country=in&apiKey=11f0dc28d8874be0bb82287cbcf26121';
+const promise = fetch(URL);
+promise.then(function(response){
+    const p = response.json();
+    p.then(function(obj){
+        console.log('Object is ', obj);
+    }).catch(function(err){
+        console.log('Invalid JSON ', err)
+    });
+}).catch(function(err){
+    console.log('No Response ', err);
+})
+Promise {<pending>}
+VM2964:2 
+        
+        
+       GET https://newsapi.org/v2/top-headlines?country=in&apiKey=11f0dc28d8874be0bb82287cbcf26121 426 (Upgrade Required)
+(anonymous) @ VM2964:2
+VM2964:6 Object is  {status: 'error', code: 'corsNotAllowed', message: 'Requests from the browser are not allowed on the Developer plan, except from localhost.'}code: "corsNotAllowed"message: "Requests from the browser are not allowed on the Developer plan, except from localhost."status: "error"[[Prototype]]: Object

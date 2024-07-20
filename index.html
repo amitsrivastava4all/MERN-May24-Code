@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        const URL = 'https://newsapi.org/v2/top-headlines?country=in&apiKey=11f0dc28d8874be0bb82287cbcf26121';
+const promise = fetch(URL);
+promise.then(function(response){
+    const p = response.json();
+    p.then(function(obj){
+        console.log('Object is ', obj);
+    }).catch(function(err){
+        console.log('Invalid JSON ', err)
+    });
+}).catch(function(err){
+    console.log('No Response ', err);
+})
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
