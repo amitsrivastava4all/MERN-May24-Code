@@ -1,0 +1,26 @@
+FireBase Data Write
+Connect Email 
+FireBase Read - PlayList print
+Live Cloud - Deployment
+Code Quality
+Next Class Project Assign - One Week Time
+a) Medium Article
+b) GitHub A/c - Source Code
+C ) Live - Cloud
+
+Web Resume
+Clone (AirBnb, LinkedIn , FlipKart)
+
+Quiz , Presentation
+
+1. Functionality
+2. Architecture
+3. Language
+4. Integration
+5. Test
+6. Deploy
+7. Deployment Bug Fix
+
+
+
+
