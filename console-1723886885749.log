@@ -1,0 +1,154 @@
+// OOJS
+undefined
+function show(){
+    console.log('I am Show ');
+}
+undefined
+show();
+VM115:2 I am Show 
+undefined
+typeof show;
+'function'
+//var amit = {id:1001, name:'Amit', };
+undefined
+var arr = [10,20,30,40,50];
+undefined
+typeof arr;
+'object'
+arr.push(1000);
+6
+arr;
+(6) [10, 20, 30, 40, 50, 1000]
+arr.length;
+6
+arr.push(44);
+7
+arr.length;
+7
+var amit = {};
+undefined
+typeof amit;
+'object'
+amit;
+{}
+var amit = {id:1001, name:'Amit'};
+undefined
+amit;
+{id: 1001, name: 'Amit'}
+var ram = {id:1002, name:'Ram'};
+undefined
+// DRY
+undefined
+console.log("Hello JS ");
+VM644:1 Hello JS 
+undefined
+function createStudent(){
+    var student = {id:1001, name:'}
+}
+VM748:2 Uncaught SyntaxError: Invalid or unexpected token
+function createStudent(){
+    var student = {id:1001, name:'Ram', course:'JS'};
+    return student;
+}
+undefined
+var x= createStudent();
+undefined
+x;
+{id: 1001, name: 'Ram', course: 'JS'}
+var y= createStudent();
+undefined
+y;
+{id: 1001, name: 'Ram', course: 'JS'}
+function createStudent(id, name, course){
+    var student = {id:id, name:name, course:course};
+    return student;
+}
+undefined
+var x = createStudent(1001, 'Shyam', 'Java');
+undefined
+x;
+{id: 1001, name: 'Shyam', course: 'Java'}
+var y = createStudent(1002, 'Tim', 'JS');
+undefined
+y;
+{id: 1002, name: 'Tim', course: 'JS'}
+function createEmployee(id, name, salary, dept){
+    var emp = {id:id, name:name, salary:salary, dept:dept};
+    return emp;
+}
+undefined
+var tom = createEmployee(1001, 'Tom', 9999, 'IT');
+undefined
+x;
+{id: 1001, name: 'Shyam', course: 'Java'}
+y;
+{id: 1002, name: 'Tim', course: 'JS'}
+tom;
+{id: 1001, name: 'Tom', salary: 9999, dept: 'IT'}
+x ;
+{id: 1001, name: 'Shyam', course: 'Java'}course: "Java"id: 1001name: "Shyam"[[Prototype]]: Object
+tom instanceof Object;
+true
+x instanceof Object;
+true
+y instanceof Object;
+true
+arr;
+(7) [10, 20, 30, 40, 50, 1000, 44]
+arr instanceof Object;
+true
+typeof x;
+'object'
+typeof y;
+'object'
+typeof arr;
+'object'
+typeof tom;
+'object'
+var g = {}; // Object (GOD)
+undefined
+arr instanceof Array;
+true
+typeof Object;
+'function'
+// Specific Types , Specific kind of Objects
+undefined
+function Employee(id, name, salary, dept){
+   // this - current calling object reference
+    this.id = id;
+    this.name = name;
+    this.salary = salary;
+    this.dept = dept;
+}
+var amit = new Employee(1001, 'Amit', 333333, 'IT');
+// when u call a function with object , that object is become this in a function.
+undefined
+tom;
+{id: 1001, name: 'Tom', salary: 9999, dept: 'IT'}
+amit;
+Employee {id: 1001, name: 'Amit', salary: 333333, dept: 'IT'}
+tom instanceof createEmployee;
+false
+tom instanceof Object;
+true
+amit instanceof Employee;
+true
+amit instanceof Object;
+true
+class Student{
+    constructor(id, name){
+        this.id = id;
+        this.name= name;
+    }
+}
+undefined
+var ram = new Student(1001, 'Ram');
+undefined
+ram;
+Student {id: 1001, name: 'Ram'}
+typeof ram;
+'object'
+ram instanceof Student;
+true
+typeof Student;
+'function'
