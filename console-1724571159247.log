@@ -1,0 +1,303 @@
+// OOJS
+undefined
+function show(){
+    console.log("I am the Show ");
+}
+undefined
+typeof show;
+'function'
+show();
+VM183:2 I am the Show 
+undefined
+var e = new show();
+VM183:2 I am the Show 
+undefined
+e;
+show {}
+typeof e;
+'object'
+var x = {};
+undefined
+typeof x;
+'object'
+var tri = {
+    sin(){
+        
+    },
+    cos(){
+        
+    }
+}
+undefined
+var validations = {
+    phone(){
+        
+    },
+    email(){
+        
+    },
+    name(){
+        
+    }
+}
+undefined
+vaidations.phone();
+VM553:1 Uncaught ReferenceError: vaidations is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM553:1
+var validations = {
+    phone(){
+        
+    },
+    email(){
+        
+    },
+    name(){
+        
+    }
+}
+undefined
+validations.phone();
+undefined
+validations.email();
+undefined
+x;
+{}
+x instanceof Object;
+true
+typeof Object;
+'function'
+function Employee(){
+    
+}
+var ram = new Employee();
+// now object has specific type instead of generic type
+// create object Employee{}
+// what is new?
+// new - keyword (dynamic memory allocation)
+undefined
+ram;
+Employee {}[[Prototype]]: Objectconstructor: ƒ Employee()[[Prototype]]: Object
+x;
+{}[[Prototype]]: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: (...)get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+function Employee(){
+    console.log('this is ' , this);
+}
+var ram = new Employee();
+// now object has specific type instead of generic type
+// create object Employee{}
+// what is new?
+// new - keyword (dynamic memory allocation)
+VM1130:2 this is  Employee {}
+undefined
+ram;
+Employee {}
+function Employee(){
+    console.log('this is ' , this);
+    this.id = 1001;
+    this.name = 'Ram';
+    this.salary = 11111;
+     console.log('this2 is ' , this);
+}
+var ram = new Employee();
+// now object has specific type instead of generic type
+// create object Employee{}
+// what is new?
+// new - keyword (dynamic memory allocation)
+VM1196:2 this is  Employee {}
+VM1196:6 this2 is  Employee {id: 1001, name: 'Ram', salary: 11111}
+undefined
+ram;
+Employee {id: 1001, name: 'Ram', salary: 11111}
+function Employee(id, name, salary){
+    console.log('this is ' , this);
+    this.id = id;
+    this.name = name;
+    this.salary = salary;
+     console.log('this2 is ' , this);
+}
+var ram = new Employee();
+// now object has specific type instead of generic type
+// create object Employee{}
+// what is new?
+// new - keyword (dynamic memory allocation)
+VM1249:2 this is  Employee {}
+VM1249:6 this2 is  Employee {id: undefined, name: undefined, salary: undefined}
+undefined
+function Employee(id, name, salary){
+    console.log('this is ' , this);
+    this.id = id;
+    this.name = name;
+    this.salary = salary;
+     console.log('this2 is ' , this);
+}
+var ram = new Employee(1001, 'Ram', 99999);
+// now object has specific type instead of generic type
+// create object Employee{}
+// what is new?
+// new - keyword (dynamic memory allocation)
+VM1293:2 this is  Employee {}
+VM1293:6 this2 is  Employee {id: 1001, name: 'Ram', salary: 99999}
+undefined
+ram;
+Employee {id: 1001, name: 'Ram', salary: 99999}
+var shyam = new Employee(1002, 'Shyam',5555);
+VM1293:2 this is  Employee {}
+VM1293:6 this2 is  Employee {id: 1002, name: 'Shyam', salary: 5555}
+undefined
+shyam;
+Employee {id: 1002, name: 'Shyam', salary: 5555}
+ram;
+Employee {id: 1001, name: 'Ram', salary: 99999}
+function Employee(id, name, salary){
+   
+    this.id = id;
+    this.name = name;
+    this.salary = salary;
+    this.print = function(){
+        console.log(`Id ${this.id} Name ${this.name} Salary ${this.salary}`);
+    }
+    
+}
+
+undefined
+var shyam = new Employee(1002, 'Shyam',5555);
+undefined
+shyam;
+Employee {id: 1002, name: 'Shyam', salary: 5555, print: ƒ}
+var ram = new Employee(1001, 'ram',8888);
+undefined
+ram;
+Employee {id: 1001, name: 'ram', salary: 8888, print: ƒ}
+typeof ram;
+'object'
+typeof shyam;
+'object'
+ram instanceof Employee;
+true
+shyam instanceof Employee;
+true
+ram instanceof Object;
+true
+ram.print();
+VM1576:7 Id 1001 Name ram Salary 8888
+undefined
+shyam.print();
+VM1576:7 Id 1002 Name Shyam Salary 5555
+undefined
+var arr = [10,20,30];
+undefined
+typeof arr;
+'object'
+var arr = new Array(100,200);
+undefined
+arr;
+(2) [100, 200]
+typeof arr;
+'object'
+arr instanceof Array;
+true
+arr.push(10000);
+3
+// push (arr) - Binding
+// arr - inside push (this)
+undefined
+ram;
+Employee {id: 1001, name: 'ram', salary: 8888, print: ƒ}
+shyam;
+Employee {id: 1002, name: 'Shyam', salary: 5555, print: ƒ}
+typeof Employee;
+'function'
+console.dir(Employee);
+VM2592:1 ƒ Employee(id, name, salary)arguments: nullcaller: nulllength: 3name: "Employee"prototype: constructor: ƒ Employee(id, name, salary)[[Prototype]]: Object[[FunctionLocation]]: VM1576:1[[Prototype]]: ƒ ()[[Scopes]]: Scopes[1]
+undefined
+Employee.prototype;
+{}
+x;
+{}
+var x= {};
+undefined
+Employee.prototype;
+{}
+function Employee(id, name, salary){
+   
+    this.id = id;
+    this.name = name;
+    this.salary = salary;
+    // this.print = function(){
+    //     console.log(`Id ${this.id} Name ${this.name} Salary ${this.salary}`);
+    // }
+    
+}
+
+undefined
+Employee.prototype.print =function(){
+    console.log(`Id ${this.id} Name ${this.name} Salary ${this.salary}`);
+}
+ƒ (){
+    console.log(`Id ${this.id} Name ${this.name} Salary ${this.salary}`);
+}
+ram.print();
+VM1576:7 Id 1001 Name ram Salary 8888
+undefined
+ram;
+Employee {id: 1001, name: 'ram', salary: 8888, print: ƒ}
+console.dir(ram);
+VM3006:1 Employeeid: 1001name: "ram"print: ƒ ()salary: 8888[[Prototype]]: Object
+undefined
+var ram = new Employee(1001, 'ram',8888);
+undefined
+ram;
+Employee {id: 1001, name: 'ram', salary: 8888}
+ram.print();
+VM2913:2 Id 1001 Name ram Salary 8888
+undefined
+console.dir(ram);
+VM3170:1 Employeeid: 1001name: "ram"salary: 8888[[Prototype]]: Object
+undefined
+ram.__proto__;
+{print: ƒ}
+ram.__proto__ == Employee.prototype;
+true
+ram.__proto__;
+{print: ƒ}
+ram.__proto__.print();
+VM2913:2 Id undefined Name undefined Salary undefined
+undefined
+Employee.prototype.computeBonus = function(){
+ return this.salary  * 0.20;   
+}
+ƒ (){
+ return this.salary  * 0.20;   
+}
+var ram = new Employee(1001, 'ram',100000);
+undefined
+ram.computeBonus();
+20000
+arr;
+(3) [100, 200, 10000]
+arr.push(44);
+4
+Array.prototype.push;
+ƒ push() { [native code] }
+arr.toString();
+'100,200,10000,44'
+Array.prototype.toString;
+ƒ toString() { [native code] }
+Object.prototype.toString;
+ƒ toString() { [native code] }
+ram;
+Employee {id: 1001, name: 'ram', salary: 100000}
+ram.print();
+VM2913:2 Id 1001 Name ram Salary 100000
+undefined
+ram.toString();
+'[object Object]'
+ram.__proto__;
+{print: ƒ, computeBonus: ƒ}computeBonus: ƒ ()print: ƒ ()constructor: ƒ Employee(id, name, salary)[[Prototype]]: Object
+ram.__proto__;
+{print: ƒ, computeBonus: ƒ}
+ram.__proto__.__proto__;
+{__defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, __lookupSetter__: ƒ, …}constructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: (...)get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+ram.__proto__.__proto__.__proto__;
+null

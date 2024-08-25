@@ -1,0 +1,164 @@
+var amit = {};
+undefined
+typeof amit;
+'object'
+amit instanceof Object;
+true
+typeof Object;
+'function'
+Object.prototype;
+{__defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, __lookupSetter__: ƒ, …}constructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: (...)get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+var a= 10;
+undefined
+a;
+10
+a.toString();
+'10'
+a.toLocaleString('hi-IN');
+'10'
+a = 100000000;
+100000000
+a.toLocaleString('hi-IN');
+'10,00,00,000'
+a.toLocaleString('en-US');
+'100,000,000'
+amit;
+{}
+amit.id = 1010;
+1010
+amit.name = 'Amit Srivastava';
+'Amit Srivastava'
+amit.address = 'Delhi';
+'Delhi'
+amit;
+{id: 1010, name: 'Amit Srivastava', address: 'Delhi'}address: "Delhi"id: 1010name: "Amit Srivastava"[[Prototype]]: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: (...)get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+Object;
+ƒ Object() { [native code] }
+typeof Object;
+'function'
+Object.prototype;
+{__defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, __lookupSetter__: ƒ, …}
+typeof Object.prototype;
+'object'
+Object.prototype.toString;
+ƒ toString() { [native code] }
+amit instanceof Object;
+true
+amit.__proto__ == Object.prototype;
+true
+Object.prototype;
+{__defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, __lookupSetter__: ƒ, …}constructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: (...)get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+amit;
+{id: 1010, name: 'Amit Srivastava', address: 'Delhi'}address: "Delhi"id: 1010name: "Amit Srivastava"[[Prototype]]: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: (...)get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+amit.id;
+1010
+amit.toString();
+'[object Object]'
+var arr = new Array(10,20,30);
+undefined
+typeof arr;
+'object'
+arr instanceof Array;
+true
+arr.__proto__ == Array.prototype;
+true
+arr;
+(3) [10, 20, 30]
+typeof arr;
+'object'
+arr instanceof Array;
+true
+typeof Array;
+'function'
+Array.prototype;
+[at: ƒ, concat: ƒ, copyWithin: ƒ, fill: ƒ, find: ƒ, …]at: ƒ at()concat: ƒ concat()constructor: ƒ Array()copyWithin: ƒ copyWithin()entries: ƒ entries()every: ƒ every()fill: ƒ fill()filter: ƒ filter()find: ƒ find()findIndex: ƒ findIndex()findLast: ƒ findLast()findLastIndex: ƒ findLastIndex()flat: ƒ flat()flatMap: ƒ flatMap()forEach: ƒ forEach()includes: ƒ includes()indexOf: ƒ indexOf()join: ƒ join()keys: ƒ keys()lastIndexOf: ƒ lastIndexOf()length: 0map: ƒ map()pop: ƒ pop()push: ƒ push()reduce: ƒ reduce()reduceRight: ƒ reduceRight()reverse: ƒ reverse()shift: ƒ shift()slice: ƒ slice()some: ƒ some()sort: ƒ sort()splice: ƒ splice()toLocaleString: ƒ toLocaleString()toReversed: ƒ toReversed()toSorted: ƒ toSorted()toSpliced: ƒ toSpliced()toString: ƒ toString()unshift: ƒ unshift()values: ƒ values()with: ƒ with()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.unscopables): {at: true, copyWithin: true, entries: true, fill: true, find: true, …}[[Prototype]]: Object
+typeof Array;
+'function'
+Array.prototype;
+[at: ƒ, concat: ƒ, copyWithin: ƒ, fill: ƒ, find: ƒ, …]
+arr.push(444);
+4
+arr.__proto__ == Array.prototype;
+true
+Array.prototype.push;
+ƒ push() { [native code] }
+// Function Constructor
+function Student(id , name, marks, course){
+    this.id = id;
+    this.name = name;
+    this.marks = marks;
+    this.course = course;
+}
+undefined
+var ram = new Student(1001, 'Ram', [90,88,66],'B.Tech');
+undefined
+ram;
+Student {id: 1001, name: 'Ram', marks: Array(3), course: 'B.Tech'}
+var tom = new Student(1002, 'Tom', [90,89,76],'B.Tech');
+undefined
+tom;
+Student {id: 1002, name: 'Tom', marks: Array(3), course: 'B.Tech'}
+Student.prototype;
+{}
+Student.prototype.totalMarks = function(){
+    return this.marks.reduce((sum, mark)=>sum+mark;
+}
+VM2409:2 Uncaught SyntaxError: missing ) after argument list
+Student.prototype.totalMarks = function(){
+    return this.marks.reduce((sum, mark)=>sum+mark);
+}
+ƒ (){
+    return this.marks.reduce((sum, mark)=>sum+mark);
+}
+Student.prototype;
+{totalMarks: ƒ}
+ram.totalMarks();
+244
+tom.totalMarks();
+255
+ram.__proto__== Student.prototype;
+true
+Student;
+ƒ Student(id , name, marks, course){
+    this.id = id;
+    this.name = name;
+    this.marks = marks;
+    this.course = course;
+}
+console.dir(Student);
+VM2652:1 ƒ Student(id , name, marks, course)
+undefined
+ram == tom;
+false
+ram;
+Student {id: 1001, name: 'Ram', marks: Array(3), course: 'B.Tech'}
+tom;
+Student {id: 1002, name: 'Tom', marks: Array(3), course: 'B.Tech'}
+ram.id = 2222;
+2222
+ram;
+Student {id: 2222, name: 'Ram', marks: Array(3), course: 'B.Tech'}
+tom;
+Student {id: 1002, name: 'Tom', marks: Array(3), course: 'B.Tech'}
+ram.__proto__ == Student.prototype;
+true
+tom.__proto__ == Student.prototype;
+true
+tom.__proto__ == ram.__proto__;
+true
+console.dir(Student);
+VM2915:1 ƒ Student(id , name, marks, course)arguments: nullcaller: nulllength: 4name: "Student"prototype: totalMarks: ƒ ()constructor: ƒ Student(id , name, marks, course)[[Prototype]]: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: (...)get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()[[FunctionLocation]]: VM1986:2[[Prototype]]: ƒ ()[[Scopes]]: Scopes[1]
+undefined
+typeof Student.prototype;
+'object'
+Student.prototype;
+{totalMarks: ƒ}
+Student.prototype.__proto__;
+{__defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, __lookupSetter__: ƒ, …}
+Student.prototype.__proto__ == Object.prototype;
+true
+Student.prototype.__proto__.__proto__
+null
+console.dir(Student);
+VM3165:1 ƒ Student(id , name, marks, course)arguments: nullcaller: nulllength: 4name: "Student"prototype: {totalMarks: ƒ}totalMarks: ƒ ()constructor: ƒ Student(id , name, marks, course)[[Prototype]]: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: (...)get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()[[FunctionLocation]]: VM1986:2[[Prototype]]: ƒ ()apply: ƒ apply()arguments: (...)bind: ƒ bind()call: ƒ call()caller: (...)constructor: ƒ Function()length: 0name: ""toString: ƒ toString()Symbol(Symbol.hasInstance): ƒ [Symbol.hasInstance]()get arguments: ƒ ()set arguments: ƒ ()get caller: ƒ ()set caller: ƒ ()[[FunctionLocation]]: [[Prototype]]: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: (...)get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()[[Scopes]]: Scopes[0][[Scopes]]: Scopes[1]
+undefined
