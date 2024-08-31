@@ -1,0 +1,193 @@
+// Modern JS
+undefined
+// ES6 - 2015
+undefined
+class Employee{
+    
+}
+undefined
+typeof Employee;
+'function'
+class Employee{
+    constructor(id, name, salary){
+        // this - reference current calling object
+        this.id = id;
+        this.name = name;
+        this.salary = salary;
+        
+    }
+    // Operations
+    show(){
+        console.log('Id ', this.id, 'Name ', this.name,' Salary ', this.salary);
+    }
+    pf(){
+        return this.salary * 0.10;
+    }
+}
+ var amit = new Employee(1001, 'Amit',2222);
+var ram = new Employee(1002, 'Ram', 4444);
+undefined
+amit;
+Employee {id: 1001, name: 'Amit', salary: 2222}
+ram;
+Employee {id: 1002, name: 'Ram', salary: 4444}
+typeof amit;
+'object'
+typeof ram;
+'object'
+ram == amit;
+false
+var amit2 = new Employee(1001, 'Amit',2222);
+undefined
+amit;
+Employee {id: 1001, name: 'Amit', salary: 2222}
+amit2;
+Employee {id: 1001, name: 'Amit', salary: 2222}
+amit == amit2;
+false
+amit.id == amit2.id;
+true
+amit.show();'
+VM1068:1 Uncaught SyntaxError: Invalid or unexpected token
+amit.show();
+VM680:11 Id  1001 Name  Amit  Salary  2222
+undefined
+ram.show();
+VM680:11 Id  1002 Name  Ram  Salary  4444
+undefined
+amit;
+Employee {id: 1001, name: 'Amit', salary: 2222}id: 1001name: "Amit"salary: 2222[[Prototype]]: Object
+ram;
+Employee {id: 1002, name: 'Ram', salary: 4444}
+Employee.prototype;
+{show: ƒ, pf: ƒ}constructor: class Employeepf: ƒ pf()show: ƒ show()[[Prototype]]: Object
+typeof Employee;
+'function'
+typeof Employee.prototype;
+'object'
+amit;
+Employee {id: 1001, name: 'Amit', salary: 2222}
+ram;
+Employee {id: 1002, name: 'Ram', salary: 4444}
+amit == ram;
+false
+amit.__proto__ == Employee.prototype;
+true
+amit.__proto__ == ram.__proto__;
+true
+Employee.prototype.bonus = function(){
+    return this.salary * 0.30;
+}
+ƒ (){
+    return this.salary * 0.30;
+}
+ram.bonus();
+1333.2
+ram.__proto__ == Employee.prototype;
+true
+ram.toString();
+'[object Object]'
+ram.__proto__ ;
+{bonus: ƒ, show: ƒ, pf: ƒ}bonus: ƒ ()constructor: class Employeepf: ƒ pf()show: ƒ show()[[Prototype]]: Object
+ram.__proto__ .__proto__;
+{__defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, __lookupSetter__: ƒ, …}constructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: (...)get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+console.log("Ram is "+ram);
+VM1944:1 Ram is [object Object]
+undefined
+"10" + 10
+'1010'
+"Amit is " + amit;
+'Amit is [object Object]'
+amit.toString();
+'[object Object]'
+amit;
+Employee {id: 1001, name: 'Amit', salary: 2222}
+ram;
+Employee {id: 1002, name: 'Ram', salary: 4444}
+amit.toString();
+'[object Object]'
+amit.toString();
+'[object Object]'
+amit.__proto__;
+{bonus: ƒ, show: ƒ, pf: ƒ}
+amit.__proto__.__proto__;
+{__defineGetter__: ƒ, __defineSetter__: ƒ, hasOwnProperty: ƒ, __lookupGetter__: ƒ, __lookupSetter__: ƒ, …}
+amit.__proto__.__proto__.toString;
+ƒ toString() { [native code] }
+amit.__proto__.__proto__.xyz;
+undefined
+console.log("ram is "+ram); // ram.toString() // Object
+VM2354:1 ram is [object Object]
+undefined
+console.log("ram is ",ram); 
+VM2371:1 ram is  Employee {id: 1002, name: 'Ram', salary: 4444}
+undefined
+window.name;
+''
+window.name = 1001;
+1001
+window.name ;
+'1001'
+var name = 10001;
+undefined
+window.name;
+'10001'
+console.log("Ram is "+ram);
+VM2595:1 Ram is [object Object]
+undefined
+console.log("Ram is "+ram.toString());
+VM2636:1 Ram is [object Object]
+undefined
+Employee.prototype.toString = function(){
+    return "Id "+this.id+" Name "+this.name + "Salary "+ this.salary ;
+}
+
+ƒ (){
+    return "Id "+this.id+" Name "+this.name + "Salary "+ this.salary ;
+}
+console.log("Ram is "+ram);
+VM2784:1 Ram is Id 1002 Name RamSalary 4444
+undefined
+amit.__proto__.toString;
+ƒ (){
+    return "Id "+this.id+" Name "+this.name + "Salary "+ this.salary ;
+}
+amit;
+Employee {id: 1001, name: 'Amit', salary: 2222}id: 1001name: "Amit"salary: 2222[[Prototype]]: Objectbonus: ƒ ()toString: ƒ ()constructor: class Employeepf: ƒ pf()show: ƒ show()[[Prototype]]: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__: ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()__proto__: (...)get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+function show(){
+    console.log(" I am show ");
+}
+undefined
+amit;
+Employee {id: 1001, name: 'Amit', salary: 2222}
+amit.cabfacility=true;
+true
+amit;
+Employee {id: 1001, name: 'Amit', salary: 2222, cabfacility: true}
+ram;
+Employee {id: 1002, name: 'Ram', salary: 4444}
+amit.show();
+VM680:11 Id  1001 Name  Amit  Salary  2222
+undefined
+ram.show();
+VM680:11 Id  1002 Name  Ram  Salary  4444
+undefined
+ram.toString();
+'Id 1002 Name RamSalary 4444'
+[ ] => Array (f)  => Object (f)
+
+var x = [10,20,30];
+
+x.__proto__ === Array.prototype;
+true
+
+Array.prototype.__proto__ === Object.prototype;
+true
+
+x.__proto__ === Array.prototype &&  Array.prototype.__proto__ === Object.prototype;
+true
+
+x.__proto__.__proto__ === Object.prototype;
+false
+
+VM3210:1 Uncaught SyntaxError: Malformed arrow function parameter list
